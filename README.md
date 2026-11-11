@@ -1,78 +1,47 @@
-# Finite Automata for Real-Time Applications
-## FLA – Assessment Task 2
+# FLA Task 2 – Designing Automata for Real-Time Applications
 
-This independent project demonstrates three input validators using finite-state
-ideas: password verification, email-format validation, and four-digit ATM PIN
-verification. It uses Python and a small browser-based demonstration.
+## Project Overview
 
-## Requirements
-- Python 3.9 or newer
-- Visual Studio Code (recommended)
+This project focuses on designing and implementing finite automata for real-time validation applications as part of the **Formal Language and Automata (FLA)** course.
 
-No external Python packages are required.
+The main objective is to demonstrate how Finite Automata can be used to recognize valid and invalid input patterns in practical applications. The project implements three real-world validation systems using regular languages and automata-based logic.
 
-## Folder structure
-```text
-FLA_Task2_Automata_Validators/
-├── automata/
-│   └── diagrams/             # State diagrams (SVG)
-├── docs/
-│   └── DESIGN_NOTE.md        # Assignment design documentation
-├── validators/
-│   ├── password.py
-│   ├── email.py
-│   └── atm_pin.py
-├── tests/
-│   ├── test_password.py
-│   ├── test_email.py
-│   └── test_atm_pin.py
-├── web/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-├── app.py                   # Python menu application
-└── README.md
-```
+## Applications Implemented
 
-## Run in VS Code
-1. Extract the ZIP file.
-2. Open VS Code.
-3. Select **File → Open Folder** and choose `FLA_Task2_Automata_Validators`.
-4. Open **Terminal → New Terminal**.
-5. Run `python --version` to check Python is installed.
-6. Run `python app.py` to use the terminal application.
-7. Run the tests using the commands below.
+1. **Password Verification System** – Validates passwords based on predefined rules and checks whether they satisfy the required format.
 
-### Run all tests
-```bash
-python -m unittest discover -s tests -v
-```
+2. **Email Format Validator** – Checks whether an email address follows a specified valid email format using pattern-based validation.
 
-### Run one test file
-```bash
-python -m unittest tests.test_password -v
-python -m unittest tests.test_email -v
-python -m unittest tests.test_atm_pin -v
-```
+3. **ATM PIN Verification** – Validates ATM PIN inputs based on the required length and numeric constraints.
 
-### Open the browser demonstration
-Open `web/index.html` in a browser, or use the VS Code Live Server extension.
-Choose a validator, enter a value, and click **Validate**.
+## Key Features
 
-## Defined rules
-- Password: 8–16 characters; at least one uppercase, lowercase, digit and
-  permitted special character from `!@#$%^&*()-_+=`; no whitespace.
-- Email: a deliberately limited regular-language subset described in
-  `docs/DESIGN_NOTE.md`.
-- ATM PIN: exactly four ASCII digits (0–9).
+- Implementation of automata-based validation logic.
+- Definition of alphabets and regular-language rules for each application.
+- Identification of valid and invalid input strings.
+- Testing with accepted and rejected test cases.
+- Explanation of state transitions and validation logic.
+- Demonstration of real-time applications of Finite Automata.
 
-## Important model limitations
-These validators check only the rules defined for this assignment. They do not
-prove that a password is secure, that an email address exists, or that an ATM
-PIN is authorized. A complete email implementation has additional standards
-and internationalization rules. Real ATM authentication also needs secure
-backend verification, rate limiting and encryption.
+## Technologies Used
 
-## Academic note
-Use the design note and diagrams to understand and explain the automata.
-Change examples or assumptions if your instructor specifies different rules.
+- Python
+- Formal Language and Automata Theory
+- Finite State Machines (FSM)
+- Regular Expressions
+
+## Objective
+
+To understand the practical applications of Finite Automata in real-world input validation systems and demonstrate how theoretical concepts of Formal Languages and Automata can be implemented through simple programming techniques.
+
+## Course Details
+
+- **Course:** Formal Language and Automata
+- **Course Code:** 21CSC301T
+- **Assessment:** Continuous Learning Assessment – 2
+- **Task:** Task 2 – Automata Validators
+- **Academic Year:** 2026–2027
+
+## Conclusion
+
+This project demonstrates the importance of Finite Automata in designing simple and efficient validation systems. It connects theoretical concepts of automata with practical applications such as password verification, email validation, and ATM PIN verification.
