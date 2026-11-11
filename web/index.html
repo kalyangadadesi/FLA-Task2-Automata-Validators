@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finite Automata Validators</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Finite Automata Validation System</h1>
+    <p class="intro">A classroom demonstration of three DFA-based validation rules.</p>
+    <section class="panel">
+      <label for="kind">Choose application</label>
+      <select id="kind">
+        <option value="password">Password Verification</option>
+        <option value="email">Email Format Validator</option>
+        <option value="pin">ATM PIN Verification</option>
+      </select>
+      <label for="entry">Enter input</label>
+      <input id="entry" type="text" autocomplete="off" placeholder="Type a value">
+      <button id="check">Validate</button>
+      <p id="result" role="status">Your result will appear here.</p>
+      <p id="reason"></p>
+    </section>
+    <section class="panel">
+      <h2>Automata model</h2>
+      <p id="model"></p>
+      <p class="small">This demo checks the defined syntax rules only; it does not
+      authenticate users or verify that an email account exists.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

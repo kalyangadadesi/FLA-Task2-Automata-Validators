@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="190" viewBox="0 0 760 190">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#243b53"/></marker></defs>
+<g fill="#f8fafc" stroke="#243b53" stroke-width="2"><rect x="20" y="55" width="145" height="60" rx="10"/><rect x="210" y="55" width="145" height="60" rx="10"/><rect x="400" y="55" width="145" height="60" rx="10"/><rect x="590" y="55" width="145" height="60" rx="10"/></g>
+<g font-family="Arial" font-size="15" fill="#102a43" text-anchor="middle"><text x="92" y="80">Local part</text><text x="92" y="100">atoms / dots</text><text x="282" y="90">@ exactly once</text><text x="472" y="90">Domain labels</text><text x="662" y="80">TLD</text><text x="662" y="100">2+ letters</text></g>
+<g stroke="#243b53" stroke-width="2" marker-end="url(#a)"><path d="M165 85 H205"/><path d="M355 85 H395"/><path d="M545 85 H585"/></g>
+<text x="380" y="155" text-anchor="middle" font-family="Arial" font-size="13" fill="#243b53">Invalid separator, whitespace or label boundary → reject</text></svg>
