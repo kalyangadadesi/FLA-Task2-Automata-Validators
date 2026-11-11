@@ -1,47 +1,228 @@
 # FLA Task 2 – Designing Automata for Real-Time Applications
 
-## Project Overview
+## 1. Introduction
 
-This project focuses on designing and implementing finite automata for real-time validation applications as part of the **Formal Language and Automata (FLA)** course.
+Formal Language and Automata is an important subject in computer science that explains how computers recognize and process different patterns of input.
 
-The main objective is to demonstrate how Finite Automata can be used to recognize valid and invalid input patterns in practical applications. The project implements three real-world validation systems using regular languages and automata-based logic.
+This project, **Designing Automata for Real-Time Applications**, focuses on using Finite Automata concepts to build simple validation systems that are commonly used in our daily lives.
 
-## Applications Implemented
+In many applications, users enter different types of information, such as passwords, email addresses, and ATM PINs. Before accepting these inputs, the system must check whether they follow the required rules.
 
-1. **Password Verification System** – Validates passwords based on predefined rules and checks whether they satisfy the required format.
+Finite Automata can help us understand how these input patterns are recognized and classified as valid or invalid.
 
-2. **Email Format Validator** – Checks whether an email address follows a specified valid email format using pattern-based validation.
+In this project, we have designed three different validation applications:
 
-3. **ATM PIN Verification** – Validates ATM PIN inputs based on the required length and numeric constraints.
+1. Password Verification System
+2. Email Format Validator
+3. ATM PIN Verification System
 
-## Key Features
+Each application follows a set of predefined rules and checks whether the given input satisfies those rules.
 
-- Implementation of automata-based validation logic.
-- Definition of alphabets and regular-language rules for each application.
-- Identification of valid and invalid input strings.
-- Testing with accepted and rejected test cases.
-- Explanation of state transitions and validation logic.
-- Demonstration of real-time applications of Finite Automata.
+## 2. Project Objectives
 
-## Technologies Used
+The main objectives of this project are:
 
-- Python
-- Formal Language and Automata Theory
-- Finite State Machines (FSM)
-- Regular Expressions
+- To understand the practical use of Finite Automata in real-world applications.
+- To design automata for different input validation systems.
+- To define the alphabet and language for each application.
+- To identify accepted and rejected input strings.
+- To understand how states and transitions work in an automaton.
+- To implement validation logic using Python.
+- To test the applications with different valid and invalid inputs.
+- To understand the limitations of Finite Automata in real-world validation systems.
 
-## Objective
+## 3. Applications Implemented
 
-To understand the practical applications of Finite Automata in real-world input validation systems and demonstrate how theoretical concepts of Formal Languages and Automata can be implemented through simple programming techniques.
+### 3.1 Password Verification System
 
-## Course Details
+A password verification system checks whether a password follows the required password rules.
 
-- **Course:** Formal Language and Automata
-- **Course Code:** 21CSC301T
-- **Assessment:** Continuous Learning Assessment – 2
-- **Task:** Task 2 – Automata Validators
-- **Academic Year:** 2026–2027
+In this project, the password is checked based on predefined conditions such as:
 
-## Conclusion
+- Minimum password length.
+- Presence of uppercase letters.
+- Presence of lowercase letters.
+- Presence of numbers.
+- Presence of special characters.
 
-This project demonstrates the importance of Finite Automata in designing simple and efficient validation systems. It connects theoretical concepts of automata with practical applications such as password verification, email validation, and ATM PIN verification.
+The system accepts passwords that satisfy the defined rules and rejects passwords that do not meet them.
+
+**Example:**
+
+Accepted passwords:
+- Hello@123
+- Welcome#45
+- Python@2026
+- Secure$789
+- Abcd@1234
+
+Rejected passwords:
+- hello
+- 123456
+- password
+- HELLO123
+- abc@12
+
+**Automata Concept:**
+
+The automaton checks the input characters and tracks whether the required conditions are satisfied. An input is accepted only when all the required conditions are met.
+
+### 3.2 Email Format Validator
+
+An email format validator checks whether an email address follows a specified email format.
+
+A valid email address generally contains:
+- A username.
+- An @ symbol.
+- A domain name.
+- A valid domain extension.
+
+The system checks whether these parts are arranged in the correct order.
+
+**Example:**
+
+Accepted email addresses:
+- student@gmail.com
+- user123@yahoo.com
+- admin@outlook.com
+- hello123@gmail.com
+- test.user@example.com
+
+Rejected email addresses:
+- studentgmail.com
+- @gmail.com
+- user@
+- user@gmail
+- user@@gmail.com
+
+**Automata Concept:**
+
+The automaton reads the email address character by character and checks whether the required pattern is followed. It moves between states according to the characters received and accepts or rejects the input based on the defined rules.
+
+### 3.3 ATM PIN Verification System
+
+An ATM PIN verification system checks whether the entered PIN follows the required numeric format.
+
+In this project, the PIN is validated based on the predefined length and numeric conditions.
+
+For example, if the system uses a 4-digit PIN, the input must contain exactly four numeric digits.
+
+**Example:**
+
+Accepted PINs:
+- 1234
+- 5678
+- 9087
+- 2468
+- 1357
+
+Rejected PINs:
+- 123
+- 12345
+- 12ab
+- abcd
+- 12@4
+
+**Automata Concept:**
+
+The automaton reads each digit and moves through different states. When exactly four numeric digits are received, it reaches the final accepting state. If the input contains letters, special characters, or an incorrect number of digits, it is rejected.
+
+## 4. Technologies Used
+
+- **Python:** Used to implement the validation programs.
+- **Formal Language and Automata Theory:** Used to understand the concepts of alphabets, languages, states, and transitions.
+- **Finite Automata:** Used to represent and understand the input validation process.
+- **Regular Expressions:** Can be used to define and check input patterns.
+
+## 5. Working Process
+
+The project follows a simple validation process:
+
+1. The user enters an input such as a password, email address, or ATM PIN.
+2. The system receives the input.
+3. The input is checked against the predefined validation rules.
+4. The program determines whether the input satisfies the conditions.
+5. If all required conditions are satisfied, the input is accepted.
+6. Otherwise, the input is rejected.
+
+This process helps us understand how automata recognize different input patterns.
+
+## 6. Important Concepts of Automata Used
+
+### Alphabet (Σ)
+An alphabet is a set of symbols used to form strings. For example, the ATM PIN validator uses numeric digits from 0 to 9.
+
+### String
+A string is a sequence of symbols taken from an alphabet. For example, 1234 is a string containing four numeric digits.
+
+### Language
+A language is a collection of strings that satisfy particular rules. In this project, each validator defines a language of accepted inputs.
+
+### States
+States represent the different conditions of an automaton while processing an input.
+
+### Transitions
+Transitions describe how an automaton moves from one state to another based on the input symbol.
+
+### Initial State
+The initial state is the starting point of an automaton.
+
+### Final State
+The final state represents an accepting condition. If the input reaches an accepting state after processing the complete string, it is accepted.
+
+## 7. Testing and Validation
+
+Each application is tested using different input strings to check whether the validation rules work correctly.
+
+For every application, at least five accepted examples and five rejected examples are considered.
+
+Testing helps to:
+- Identify incorrect inputs.
+- Check whether valid inputs are accepted.
+- Verify that invalid inputs are rejected.
+- Understand the working of the designed automata.
+
+## 8. Real-Time Applications
+
+The concepts used in this project are useful in many real-world systems.
+
+- **Password Validation:** Used in websites, mobile applications, and user account registration.
+- **Email Validation:** Used in online registration forms, communication platforms, and account creation.
+- **ATM PIN Validation:** Used in banking systems to check the format of a PIN entered by a user.
+
+These examples show how automata concepts are connected to everyday computer applications.
+
+## 9. Limitations of the Project
+
+Although Finite Automata are useful for checking input patterns, they have some limitations.
+
+- They can check predefined patterns but cannot understand the meaning of an input.
+- Basic automata cannot verify whether an email address actually exists.
+- Password format validation does not determine whether a password is strong against every type of attack.
+- ATM PIN format validation does not confirm whether the PIN belongs to the actual bank account.
+- Additional processing and database verification are required for real-world security and business rules.
+
+Therefore, Finite Automata are useful for syntax and format validation, while additional processing is needed for complete real-time verification.
+
+## 10. Conclusion
+
+This project demonstrates how the concepts of Formal Language and Automata can be applied to practical input validation problems.
+
+By designing three applications, namely Password Verification, Email Format Validation, and ATM PIN Verification, we understand how Finite Automata can recognize valid and invalid input patterns.
+
+The project provides practical knowledge about alphabets, strings, languages, states, transitions, and accepting conditions.
+
+It also helps us understand the importance of automata in computer science and how theoretical concepts can be connected to real-world applications.
+
+Overall, this project improves our understanding of Finite Automata and demonstrates their usefulness in building simple and efficient validation systems.
+
+---
+
+**Course Details**
+
+- Course Name: Formal Language and Automata
+- Course Code: 21CSC301T
+- Assessment: Continuous Learning Assessment – 2
+- Assessment Task: Task 2
+- Academic Year: 2026–2027
+- Department: Artificial Intelligence and Machine Learning
